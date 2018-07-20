@@ -2,17 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-	background-color: #cc99ff;
-	height: 100%;
+
+
+div h1{
+	text-align: center;
+}
+div p{
+	text-align: center;
 }
 
 
-#tl,#tl2{
-	font-size: 150px;
+div.jumbotron a{
+	width: 50%;
+	background-color: #00e600;
+	border-color: none;
+	margin: auto;
 }
 
-body:hover{
-	background-color: #e6ccff;
-	transition: .3s;
+div.jumbotron a:hover{
+	background-color: #33ff33;
+	
+}
+div.jumbotron a:active{
+	background-color: #006600;
+	color: black;
+
 }
