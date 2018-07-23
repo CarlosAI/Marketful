@@ -49,13 +49,19 @@ span:hover{
 	.color{
 		background-image:none;
 		background-color:white;
-		opacity: .5;
+		opacity: .9;
 		margin: 5px;
 	}
 
-	.color2{
-		background-color: red;
+	div.row{
+		padding-top: 35px;
+	}
+	.h{
+		margin-bottom: 25px;
+	}
 
+	input{
+		height: 55px;
 	}
 	
 }
