@@ -28,7 +28,7 @@ div.row:nth-child(1){
 
 span{
 	/*background-color:;*/
-    cursor: none;
+    /*cursor: none;*/
 
 }
 span.input-group-text:hover{
@@ -52,7 +52,7 @@ span.input-group-text:hover{
 	height: 40px;
 }
 
-.icon-img{
+.icon-img,.btn-icon{
 	position: absolute;
 	width: 30px;
 	height: 30px;
@@ -60,6 +60,10 @@ span.input-group-text:hover{
 	right: 5px;
 	z-index: 10;
 	border-radius: 3px;
+}
+.btn-icon{
+	background-image: url(icon.jpg);
+	background-size: 100% 100%;
 }
 
 .icon-img:hover{
