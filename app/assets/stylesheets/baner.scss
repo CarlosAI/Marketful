@@ -22,9 +22,10 @@ body{
 
 }
 
-div.row{
+div.row:nth-child(1){
 	padding-top: 150px;
 }
+
 span{
 	background-color: transparent;
     cursor: pointer;
@@ -42,6 +43,14 @@ span:hover{
 	font-size: 50px;
 	padding-top: 10px;
 }
+.eq{
+	position: relative;
+	margin: auto;
+}
+.btn{
+	width: 160px;
+	height: 40px;
+}
 
 
 @media (max-width: 767px){
@@ -53,7 +62,7 @@ span:hover{
 		margin: 5px;
 	}
 
-	div.row{
+	div.row:nth-child(1){
 		padding-top: 35px;
 	}
 	.h{
@@ -64,4 +73,30 @@ span:hover{
 		height: 55px;
 	}
 	
+}
+
+@media (max-width: 449px){
+	.color{
+		background-image:none;
+		background-color:white;
+		opacity: .9;
+		margin: 3px;
+	}
+
+	div.row:nth-child(1){
+		padding-top: 20px;
+	}
+	.h{
+		margin-bottom: 25px;
+	}
+
+	input{
+		height: 55px;
+	}
+
+	.titulo{
+	font-size: 30px;
+	padding-top: 10px;
+}
+
 }
