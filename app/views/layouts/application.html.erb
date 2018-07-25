@@ -17,41 +17,60 @@
 
 
 
-<header class="navbar-fixed-top">
-    <nav class="sobrebarra">
-      <div class="telefonos">
-        <i class="fas fa-phone icono"> </i> TEL (449) 300 9067  <span class="glyphicon glyphicon-envelope no-cel" id="sobre"></span> <span class="correo no-cel"> hola@marketful.mx </span>
-      </div>
-      <div class="redes ">
-        <a href="https://www.pinterest.com.mx/socialmedia4435/pins/" id="logo_pinterest" class="fa fa-pinterest logo_sn " target="_blank"></a>  
-        <a href="https://www.instagram.com/marketfulmx" id="logo_ig" class="fa fa-instagram logo_sn" target="_blank"></a>   
-        <a href="https://www.facebook.com/marketfulmx/" id="logo_fb" class="fa fa-facebook logo_sn" target="_blank"></a>  
-        <a href="https://www.linkedin.com/company/marketful-fulfillment/" id="logo_lnkd" class="fa fa-linkedin logo_sn" target="_blank"></a>       
-      </div>
-    </nav> 
-
-  <nav class="navbar  barra">
-    <!-- <div class="contenedor"> -->
-      <%#= link_to "MARKETFUL", '/', id: "logo" %>
-      <%#= image_tag("Logo_marketful.png", :alt => "Logo Marketful") %>
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border: 1px solid black;" >
-          <span class="icon-bar" style="border: 1px solid black;"></span>
-          <span class="icon-bar" style="border: 1px solid black;"></span>
-          <span class="icon-bar" style="border: 1px solid black;"></span>                        
-        </button>
-        <div id="#logo_marketful">
-        <%=link_to image_tag("FIRMA VERTICAL.png", height: "82px", alt: "Edit Entry", id: "logo_marketful"), '/' %>
-        </div>
-      </div>
-      <div class="collapse navbar-collapse nombres" id="myNavbar" style="padding-left: 0vh;" >
-
-        
-        
-      </div>
-    <!-- </div> -->
-  </nav>
-</header>
+    <%= yield %>
+<footer class="footer">
+<!--   <small>
+    Marketful RMS
+  </small> -->
+  <!-- <nav> -->
+  <!--   <ul>
+      <li><%#= link_to "Nosotros",   '#' %></li>
+      <li><%#= link_to "Contacto", '#' %></li>
+    </ul> -->
+    
+  <!-- </nav> -->
+  <div class="sobrenosotros">
+    <div id="barra-fucsia" class="no-cel">
+    </div>
+    <div class="titulo-sn">
+      SOBRE NOSOTROS
+    </div>
+    <div id="text-sn">
+      Proporcionamos a las personas y empresas que venden via online, herramientas
+      tecnologicas practicas y eficaces, disenadas para simpificar el proceso de 
+      comercializacion y distribucion de sus productos 
+    </div>
+    <div id="redes-footer">
+      <a href="https://www.pinterest.com.mx/socialmedia4435/pins/" class="fa fa-pinterest logo_sn" target="_blank"></a>  
+      <a href="https://www.instagram.com/marketfulmx" class="fa fa-instagram logo_sn" target="_blank"></a>   
+      <a href="https://www.facebook.com/marketfulmx/" class="fa fa-facebook logo_sn" target="_blank"></a>  
+      <a href="https://www.linkedin.com/company/marketful-fulfillment/" class="fa fa-linkedin logo_sn" target="_blank"></a> 
+    </div>
+  </div>
+  <div class="contacto-footer no-cel">
+    <div class="texto-contacto" id="primer-telefono">
+      <i class="fas fa-phone icono-footer"> </i> 
+    </div>
+    <div id="contacto-main" class="info-contacto texto-contacto">
+      Tel. (449) 300 90 67
+    </div>
+    <div class="texto-contacto">
+      <i class="glyphicon glyphicon-envelope sobre-footer "> </i> 
+    </div>
+    <div class="info-contacto texto-contacto">
+      hola@marketful.mx
+    </div>
+    <div class="texto-contacto">
+      <i class="fa fa-map-marker icono-footer"> </i> 
+    </div>
+    <div class="info-contacto texto-contacto">
+      David Guzman C-8N 114, Cd. Industrial
+    </div>
+  </div>
+  <div class="mapa-footer no-cel">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3703.6450199873952!2d-102.28835078568792!3d21.83264226522596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429edca5488059d%3A0xc83fc98ce280d6f1!2sMarketful!5e0!3m2!1ses-419!2smx!4v1529968075930"  frameborder="0" style="border:0" allowfullscreen class="mapag"></iframe>
+  </div>
+</footer>
 
 <style>
 
@@ -61,7 +80,6 @@
   margin-top: -115px; /*same height as header*/
   visibility: hidden;
 }
-
 
 
 header{
@@ -183,66 +201,12 @@ header{
 .navbar-header{
   /*float; left;*/
 }
-</style>
 
+/*Footer*/
+#contacto-main{
+	margin-top: 70px;
+}
 
-
-    <%= yield %>
-<footer class="footer">
-<!--   <small>
-    Marketful RMS
-  </small> -->
-  <!-- <nav> -->
-  <!--   <ul>
-      <li><%#= link_to "Nosotros",   '#' %></li>
-      <li><%#= link_to "Contacto", '#' %></li>
-    </ul> -->
-    
-  <!-- </nav> -->
-  <div class="sobrenosotros">
-    <div id="barra-fucsia" class="no-cel">
-    </div>
-    <div class="titulo-sn">
-      SOBRE NOSOTROS
-    </div>
-    <div id="text-sn">
-      Proporcionamos a las personas y empresas que venden via online, herramientas
-      tecnologicas practicas y eficaces, disenadas para simpificar el proceso de 
-      comercializacion y distribucion de sus productos 
-    </div>
-    <div id="redes-footer">
-      <a href="https://www.pinterest.com.mx/socialmedia4435/pins/" class="fa fa-pinterest logo_sn" target="_blank"></a>  
-      <a href="https://www.instagram.com/marketfulmx" class="fa fa-instagram logo_sn" target="_blank"></a>   
-      <a href="https://www.facebook.com/marketfulmx/" class="fa fa-facebook logo_sn" target="_blank"></a>  
-      <a href="https://www.linkedin.com/company/marketful-fulfillment/" class="fa fa-linkedin logo_sn" target="_blank"></a> 
-    </div>
-  </div>
-  <div class="contacto-footer no-cel">
-    <div class="texto-contacto" id="primer-telefono">
-      <i class="fas fa-phone icono-footer"> </i> 
-    </div>
-    <div class="info-contacto texto-contacto">
-      Tel. (449) 300 90 67
-    </div>
-    <div class="texto-contacto">
-      <i class="glyphicon glyphicon-envelope sobre-footer "> </i> 
-    </div>
-    <div class="info-contacto texto-contacto">
-      hola@marketful.mx
-    </div>
-    <div class="texto-contacto">
-      <i class="fa fa-map-marker icono-footer"> </i> 
-    </div>
-    <div class="info-contacto texto-contacto">
-      David Guzman C-8N 114, Cd. Industrial
-    </div>
-  </div>
-  <div class="mapa-footer no-cel">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3703.6450199873952!2d-102.28835078568792!3d21.83264226522596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429edca5488059d%3A0xc83fc98ce280d6f1!2sMarketful!5e0!3m2!1ses-419!2smx!4v1529968075930"  frameborder="0" style="border:0" allowfullscreen class="mapag"></iframe>
-  </div>
-</footer>
-
-<style>
 .mapag{
   margin-top: 2%;
   width: 70%;
@@ -318,8 +282,8 @@ header{
 
 .mapa-footer{
   margin-left: 65.5%;
-  height: 93%;
-  width: 40.7%;
+  /*height: 93%;*/
+  /*width: 40.7%;*/
   /*background-color: yellow;*/
   z-index: 9;
   position: absolute;
@@ -351,6 +315,7 @@ header{
   }
 }
 .titulo-sn{   
+	margin-top: 30px;
     color: #ffffff;
     z-index: 5;
   }
@@ -381,5 +346,27 @@ header{
   /*float: right;*/
   text-align: center;
 }
+.mapa-footer {
+    margin-left: 65.5%;
+    /* height: 93%; */
+    /* width: 40.7%; */
+    /* background-color: yellow; */
+    z-index: 9;
+    position: absolute;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.mapa-footer {
+    margin-left: 65.5%;
+    /* height: 93%; */
+    /* width: 40.7%; */
+    /* background-color: yellow; */
+    z-index: 9;
+    position: absolute;
+    padding: 0px;
+    margin-top: 20px;
+}
+</style>	
   </body>
 </html>
