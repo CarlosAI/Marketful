@@ -15,7 +15,54 @@
 
   <body>
 
+<header class="navbar-fixed-top">
+    <nav class="sobrebarra">
+      <div class="telefonos">
+        <i class="fas fa-phone icono"> </i> TEL (449) 300 9067  <span class="glyphicon glyphicon-envelope no-cel" id="sobre"></span> <span class="correo no-cel"> hola@marketful.mx </span>
+      </div>
+      <div class="redes ">
+        <a href="https://www.pinterest.com.mx/socialmedia4435/pins/" id="logo_pinterest" class="fa fa-pinterest logo_sn " target="_blank"></a>  
+        <a href="https://www.instagram.com/marketfulmx" id="logo_ig" class="fa fa-instagram logo_sn" target="_blank"></a>   
+        <a href="https://www.facebook.com/marketfulmx/" id="logo_fb" class="fa fa-facebook logo_sn" target="_blank"></a>  
+        <a href="https://www.linkedin.com/company/marketful-fulfillment/" id="logo_lnkd" class="fa fa-linkedin logo_sn" target="_blank"></a>       
+      </div>
+    </nav> 
 
+  <nav class="navbar  barra">
+    <!-- <div class="contenedor"> -->
+      <%#= link_to "MARKETFUL", '/', id: "logo" %>
+      <%#= image_tag("Logo_marketful.png", :alt => "Logo Marketful") %>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border: 1px solid black;" >
+          <span class="icon-bar" style="border: 1px solid black;"></span>
+          <span class="icon-bar" style="border: 1px solid black;"></span>
+          <span class="icon-bar" style="border: 1px solid black;"></span>                        
+        </button>
+        <div id="#logo_marketful">
+        <%=link_to image_tag("Logo_marketful.png", height: "82px", alt: "Edit Entry", id: "logo_marketful"), '/' %>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse nombres" id="myNavbar" style="padding-left: 0vh;" >
+
+        
+        <ul class="nav navbar-nav " id="myNavbarul">
+          <li><%= link_to "HOME",   '/' %></li>
+            <li><a href="#section_servicios" >SERVICIOS</a></li>
+            <!-- <li><%#= link_to "POR QUE ELEGIRNOS",   '/' %></li> -->
+            <li><a href="#section_fulfillment" >FULFILLMENT</a></li>
+            <li><a href="#section_clientes" >CLIENTES</a></li>
+            <li><a href="#section2">CONTACTO</a></li>
+        </ul>
+      </div>
+    <!-- </div> -->
+  </nav>
+</header>
+
+
+
+
+
+<!-- fin header -->
 
     <%= yield %>
 <footer class="footer">
