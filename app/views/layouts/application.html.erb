@@ -28,9 +28,17 @@
         <a href="https://www.linkedin.com/company/marketful-fulfillment/" id="logo_lnkd" class="fa fa-linkedin logo_sn" target="_blank"></a>       
       </div>
     </nav>
-    
-    <nav class="navbar navbar-expand-md">
-      <ul class="navbar-nav">
+</header>
+    <nav class="navbar-expand-md navbar-light bg-light sticky-top">
+
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse w-100" id="collapse_target">
+      <a class="navbar-brand"> <%= link_to image_tag('Logo_marketful.png', :class => 'img-logo') %> </a>
+
+      <ul class="navbar-nav nav w-100 ml-auto justify-content-end">
         <li class="nav-item">
           <a class="nav-link" href="#">HOME</a>
         </li>
@@ -46,13 +54,11 @@
         <li class="nav-item">
           <a class="nav-link" href="#">CONTACTO</a>
         </li>
-      </ul>
-      
+      </ul> 
+    </div>
     </nav> 
 
     <!-- </div> -->
-  </nav>
-</header>
 
 
 
@@ -144,6 +150,14 @@
 </footer>
 
 <style>
+
+ul{
+  padding-right: 30px;
+}
+
+.img-logo{
+  height: 82px;
+}
 
 .anchor{
   display: block;
