@@ -5,32 +5,35 @@
 			</div>
 			<div class="container">
 				<div class="row ">
-					<div class="col-lg-4 col-md-4 col-xs-12 h">
+					<div class="col-lg-4 col-md-6 col-xs-12 h">
 						<div class="input-group mb-3">
   							<div class="input-group-prepend">
     							<span class="input-group-text" id="inputGroup-sizing-default">Origen</span>
   							</div>
-  							<input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  							<input type="text" placeholder="Direccion de Origen" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
   							<span class="map in"><button type="button" class="btn-icon" data-toggle="modal" data-target="#exampleModalCenter">
 							</button></span>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-4 col-xs-12 h">
+					<div class="col-lg-4 col-md-6 col-xs-12 h">
 						<div class="input-group mb-3">
   							<div class="input-group-prepend">
     							<span class="input-group-text" id="inputGroup-sizing-default">Destino</span>
   							</div>
-  							<input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  							<input type="text" placeholder="Direccion de destino" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
   							<span class="map in"><button type="button" class="btn-icon" data-toggle="modal" data-target="#exampleModalCenter">
 							</button></span>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-4 col-xs-12 h">
+					<div class="col-lg-4 col-md-6 col-xs-12 h">
 						<div class="input-group mb-3">
   							<div class="input-group-prepend">
     							<span class="input-group-text" id="inputGroup-sizing-default">Producto</span>
-  							</div>
-  							<input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+		  							<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus">Popover on bottom
+									</button>
+									<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="<h2 class='red'>HOLA</h2>">Popover on bottom
+									</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -55,7 +58,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14817.35223019791!2d-102.30361058022459!3d21.805865550000004!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1532473134494" width="470" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14817.35223019791!2d-102.30361058022459!3d21.805865550000004!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1532473134494"  frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -66,6 +69,11 @@
 </div>
 
 
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover({ html : true });
+});
+</script>
 
 
 <div class="espacio"></div>

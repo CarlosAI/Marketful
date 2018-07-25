@@ -72,7 +72,14 @@ span.input-group-text:hover{
 
 }
 
+iframe{
+	width:470px; 
+	height:450px;
+}
 
+.red{
+	color:red;
+}
 
 @media (max-width: 767px){
 
@@ -94,13 +101,23 @@ span.input-group-text:hover{
 		height: 55px;
 	}
 
-	.icon-img{
+	.icon-img,.btn-icon{
 	position: absolute;
 	width: 45px;
 	height: 45px;
 	top: 4px;
 	right: 5px;
 	z-index: 10;
+}
+
+.modal-content{
+	width: 400px;
+	height: 400px;
+}
+
+iframe{
+	width: 100%;
+	height: 250px;
 }
 	
 }
