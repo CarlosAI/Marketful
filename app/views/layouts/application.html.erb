@@ -68,6 +68,70 @@
 
 
     <%= yield %>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- Footer -->
+	<section id="footer">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left rowalter">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>SOBRE NOSOTROS</h5>
+					<p class="nosotros2">Proporcionamos a las personas y empresas que venden via online, herramientas tecnologicas practicas y eficaces, disenadas para simpificar el proceso de comercializacion y distribucion de sus productos</p>
+
+					<!-- LINKS ANIMADOS DENTRO DEL FOOTER -->
+					<!-- <ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>SOBRE NOSOTROS</a></li> 
+					</ul>-->
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>CONTACTANOS</h5>
+					<ul class="list-unstyled quick-links">
+						<div class="contacto-footer no-cel">
+    					<div class="texto-contacto" id="primer-telefono">
+                          <i class="fas fa-phone icono-footer"> </i> 
+                        </div>
+                        <div class="info-contacto texto-contacto nosotros2">
+                          Tel. (449) 300 90 67
+                       </div>
+                        <div class="texto-contacto">
+                         <i class="glyphicon glyphicon-envelope sobre-footer "> </i> 
+                        </div>
+                        <div class="info-contacto texto-contacto nosotros2">
+                          hola@marketful.mx
+                        </div>
+                        <div class="texto-contacto">
+                          <i class="fa fa-map-marker icono-footer"> </i> 
+                        </div>
+                        <div class="info-contacto texto-contacto nosotros2">
+                          David Guzman C-8N 114, Cd. Industrial
+                        </div>
+                      </div>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 tamano">
+					<div class="mapa-footer no-cel">
+  					  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3703.6450199873952!2d-102.28835078568792!3d21.83264226522596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429edca5488059d%3A0xc83fc98ce280d6f1!2sMarketful!5e0!3m2!1ses-419!2smx!4v1529968075930"  frameborder="0" style="border:0" allowfullscreen class="mapag tamano"></iframe>
+ 					</div>
+				</div>
+			</div>
+<!-- 			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+				</hr>
+			</div> -->	
+		</div>
+	</section>
+	<!-- ./Footer -->
+
+<style>
+=======
 
 <style>
 
@@ -205,8 +269,125 @@ header{
 }
 
 
+/* Footer */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-</style>  
+.tamano{
+	height: 100%;
+	max-height: 100%;
+	width: 100%;
+	max-width: 100%;
+}
+
+.rowalter{
+	padding-top: 15px !important;
+}
+
+.mapa-footer{
+ 
+  /*background-color: yellow;*/
+  position: relative;
+}
+
+#redes-footer{
+  /*margin-right: 20.1%;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Poppins Regular";
+  font-size: 25.4px;
+  color: white;
+  /*max-width: 30%;*/
+  /*overflow: auto;*/
+  /*float: right;*/
+  text-align: center;
+}
+
+.nosotros2{
+	font-size: 15px;
+	color: white;
+	text-align: center;
+}
+h5{
+text-align: center;
+}
+
+section {
+    padding: 0px;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: #2a2a2a !important;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
+</style>	
+
 
 
   </body>
