@@ -1,3 +1,6 @@
+	
+
+
 	<div class="container-full">
 		<div class="color img-responsive" >
 			<div class="eq"><p class="titulo font-weight-bold">Cotiza con un Clic!</p>
@@ -9,7 +12,7 @@
   							<div class="input-group-prepend">
     							<span class="input-group-text" id="inputGroup-sizing-default">Origen</span>
   							</div>
-  							<input type="text" placeholder="Direccion de Origen" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  							<input type="text" placeholder="Direccion de Origen" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="dir1">
   							<span class="map in"><button type="button" class="btn-icon" data-toggle="modal" data-target="#exampleModalCenter">
 							</button></span>
 						</div>
@@ -90,9 +93,13 @@
 		</div>
 	</div>
 
+<!-- MODAL DE MAPAS -->
 
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&language=es"></script>
+
+<div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" id="modal-size" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Choose Your Adress</h5>
@@ -101,7 +108,20 @@
         </button>
       </div>
       <div class="modal-body">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14817.35223019791!2d-102.30361058022459!3d21.805865550000004!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1532473134494"  frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        
+        <section id="texto">
+      <input id="address" type="textbox" size="38" maxlength="80" value="" placeholder="Dirección o Lat, Lng" />
+      <br>
+      <!--nos devuelve la direcion completa-->
+      Dirección completa:<br><span style="color:blue;" id="direccion"></span>
+      <input type="button" class="navi" value="Localizar" onclick="codeAddress()">
+    </section>
+        <div id="mapa">
+         </div>
+          <!-- END MAPA -->
+        
+     
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -111,6 +131,9 @@
   </div>
 </div>
 
+
+
+<!-- END MODAL DE MAPAS -->
 
 
 <div class="espacio"></div>
@@ -161,13 +184,62 @@
 </div>
 
 
-
-
-
 <script>
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover({ html : true });
 });
+
+
 </script>
 
+<script type="text/javascript">
+//<![CDATA[
+var map, geocoder;
+window.onload = function () {
+                                                                 <!--latitud y longitud que podemos cambiar una vez obtenidas-->
+  var latlng = new google.maps.LatLng(40.323892 , -3.852782 );
+    <!--podemos aumentar o disminuir el zoom del mapa a mostrar (zoom: 15)-->
+  var mapOptions = {
+    zoom: 15,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('mapa'), mapOptions);
+  // llama a la funcion
+  geocoder = new google.maps.Geocoder();
+};
+
+
+ 
+function codeAddress() {
+  var address = document.getElementById('address').value;
+  // Función completa de Geocoding
+  geocoder.geocode({
+    'address': address
+// 'latLng': latlng si lo que queremos ejecutar en geocodificación inversa
+  }, function (results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      // document.getElementById('x').innerHTML = results[0].geometry.location.lat().toFixed(6);
+      // document.getElementById('y').innerHTML = results[0].geometry.location.lng().toFixed(6);
+      map.setCenter(results[0].geometry.location);
+      document.getElementById('direccion').innerHTML = results[0].formatted_address;
+      document.getElementById('dir1').innerHTML = results[0].formatted_address;
+      var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location
+      });
+	  //podemos personalisar el toltip aqui
+      infowindow = new google.maps.InfoWindow({
+        content: '<h4>JK electricidad</h4>'+results[0].formatted_address + '<br> Latitud: ' + results[0].geometry.location.lat().toFixed(6) + '<br> Longitud: ' + results[0].geometry.location.lng().toFixed(6)
+      });
+      infowindow.open(map, marker)
+    }
+// Se detallan los diferentes tipos de error
+else {
+      alert('Geocode no tuvo éxito por la siguiente razón: ' + status)
+    }
+  })
+};
+//]]>
+</script>
 
