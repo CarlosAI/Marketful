@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<!-- chat -->
-  	<script src="https://wchat.freshchat.com/js/widget.js"></script>
+    <!-- chat -->
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
 
     <title>PruebaFinal</title>
     <%= csrf_meta_tags %>
@@ -16,21 +16,29 @@
   <body>
     
 
-<header class="navbar-fixed-top">
-    <nav class="sobrebarra">
+<div class="sticky-top">
+    <div class="sobrebarra container-full">
       <div class="telefonos">
         <i class="fas fa-phone icono"> </i> TEL (449) 300 9067  <span class="glyphicon glyphicon-envelope no-cel" id="sobre"></span> <span class="correo no-cel"> hola@marketful.mx </span>
       </div>
       <div class="redes ">
-        <a href="https://www.pinterest.com.mx/socialmedia4435/pins/" id="logo_pinterest" class="fa fa-pinterest logo_sn " target="_blank"></a>  
+        <a href="https://www.pinterest.com.mx/socialmedia4435/pins/" id="logo_pinterest" class="fa fa-pinterest logo_sn " target="_blank"></a> 
         <a href="https://www.instagram.com/marketfulmx" id="logo_ig" class="fa fa-instagram logo_sn" target="_blank"></a>   
         <a href="https://www.facebook.com/marketfulmx/" id="logo_fb" class="fa fa-facebook logo_sn" target="_blank"></a>  
         <a href="https://www.linkedin.com/company/marketful-fulfillment/" id="logo_lnkd" class="fa fa-linkedin logo_sn" target="_blank"></a>       
       </div>
-    </nav>
-    
-    <nav class="navbar navbar-expand-md">
-      <ul class="navbar-nav">
+    </div>
+  
+    <nav class="navbar-expand-md navbar-light">
+
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse w-100" id="collapse_target">
+      <a class="navbar-brand"> <%= link_to image_tag('logo2.png', :class => 'img-logo') %> </a>
+
+      <ul class="navbar-nav nav w-100 ml-auto justify-content-end">
         <li class="nav-item">
           <a class="nav-link" href="#">HOME</a>
         </li>
@@ -46,47 +54,19 @@
         <li class="nav-item">
           <a class="nav-link" href="#">CONTACTO</a>
         </li>
-      </ul>
-      
+      </ul> 
+    </div>
     </nav> 
+  </div>
 
     <!-- </div> -->
-  </nav>
-</header>
 
 
 
 <!-- fin header -->
 
 
-<!-- <nav class="navbar navbar-expand-sm bg-light navbar-light">
- 
-  <a class="navbar-brand" href="#">
-    <img src="bird.jpg" alt="logo" style="width:40px;">
-  </a>
 
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 2</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 3</a>
-    </li>
-      <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Dropdown link
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
-    </li>
-  </ul>
-</nav> -->
     <%= yield %>
 <!------ Include the above in your HEAD tag ---------->
 
@@ -151,14 +131,26 @@
 	<!-- ./Footer -->
 
 <style>
+=======
+
+<style>
+
+nav{
+  background-color: white;
+}
+
+ul{
+  padding-right: 30px;
+}
+.img-logo{
+  height: 82px;
+}
 .anchor{
   display: block;
   height: 115px; /*same height as header*/
   margin-top: -115px; /*same height as header*/
   visibility: hidden;
 }
-
-
 header{
   position: relative;
   display:block;
@@ -198,7 +190,6 @@ header{
   font-family: 'Poppins Regular';
   font-size: 14px;
   padding-top: 18px;
-
 }
 .barra2{
   margin: 0px;
@@ -214,7 +205,6 @@ header{
     margin-left: 0%;
   }
 }
-
 @media (max-width: 990px) {
   .correo{
     visibility: hidden;
@@ -237,7 +227,6 @@ header{
 #sobre{
   margin-left: 25px;
 }
-
 .telefonos{
   margin-left: 2.1%;
   padding-top: 5px;
@@ -252,8 +241,8 @@ header{
 }
 .redes{
   margin-right: 20.1%;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   font-family: "Poppins Regular";
   font-size: 16.4px;
   color: white;
@@ -270,14 +259,15 @@ header{
   color: blue;
   font-size: 19px;
   margin-right: 2px;
-  font-family: "fontawesome";
 }
+  font-family: "fontawesome";
 .navbar-fixed-top{
   position:relative;
 }
 .navbar-header{
   /*float; left;*/
 }
+
 
 /* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -397,6 +387,7 @@ section .section-title {
 }
 
 </style>	
+
 
 
   </body>
