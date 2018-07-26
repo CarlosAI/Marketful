@@ -1,3 +1,18 @@
+/*MAPA*/
+input.btn-buscar{
+	margin-top: 5px;
+	width: 500px;
+}
+.modal-content{
+	width: 100%;
+	height: 500px;
+}
+#mapa{
+	width:100%;
+	height:400px;
+}
+
+/*END MAPA*/
 body{
 	background-image: url(morado.jpg);
 	background-repeat: no-repeat;
@@ -72,14 +87,12 @@ span.input-group-text:hover{
 
 }
 
-iframe{
-	width:470px; 
-	height:450px;
-}
+
 
 .red{
 	color:red;
 }
+
 
 @media (max-width: 767px){
 
@@ -109,16 +122,18 @@ iframe{
 	right: 5px;
 	z-index: 10;
 }
-
+/*
 .modal-content{
-	width: 400px;
+	width: 800px;
 	height: 400px;
+	background-color: red;
 }
 
-iframe{
+*/
+/*iframe{
 	width: 100%;
 	height: 250px;
-}
+}*/
 	
 }
 
