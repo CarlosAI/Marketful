@@ -93,7 +93,7 @@
 <!-- Footer -->
 	<section id="footer">
 		<div class="container">
-			<div class="row text-center text-xs-center text-sm-left text-md-left">
+			<div class="row text-center text-xs-center text-sm-left text-md-left rowalter">
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h5>SOBRE NOSOTROS</h5>
 					<p class="nosotros2">Proporcionamos a las personas y empresas que venden via online, herramientas tecnologicas practicas y eficaces, disenadas para simpificar el proceso de comercializacion y distribucion de sus productos</p>
@@ -135,7 +135,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5 holi">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
 					<ul class="list-unstyled list-inline social text-center">
 						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
 						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
@@ -282,12 +282,15 @@ header{
 /* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
+
+.rowalter{
+	padding-top: 15px !important;
+}
+
 .mapa-footer{
-  right: 5%;
-  top: -15%;
+  right: 2%;
   /*background-color: yellow;*/
   position: relative;
-  margin-top: 0px;
 }
 
 #redes-footer{
@@ -324,12 +327,13 @@ section .section-title {
 }
 #footer {
     background: #2a2a2a !important;
+    height: 300px;
+    width: 100%;
+    position: absolute;
 }
 #footer h5{
 	padding-left: 10px;
     border-left: 3px solid #eeeeee;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
     color:#ffffff;
 }
 #footer a {
