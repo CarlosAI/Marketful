@@ -96,7 +96,7 @@
 <!-- MODAL DE MAPAS -->
 
 
-<script src="https://maps.googleapis.com/maps/api/js?sensor=false&language=es"></script>
+
 
 <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg" id="modal-size" role="document">
@@ -219,8 +219,8 @@ function codeAddress() {
 // 'latLng': latlng si lo que queremos ejecutar en geocodificación inversa
   }, function (results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
-      // document.getElementById('x').innerHTML = results[0].geometry.location.lat().toFixed(6);
-      // document.getElementById('y').innerHTML = results[0].geometry.location.lng().toFixed(6);
+      document.getElementById('x').innerHTML = results[0].geometry.location.lat().toFixed(6);
+      document.getElementById('y').innerHTML = results[0].geometry.location.lng().toFixed(6);
       map.setCenter(results[0].geometry.location);
       document.getElementById('direccion').innerHTML = results[0].formatted_address;
       document.getElementById('dir1').innerHTML = results[0].formatted_address;
