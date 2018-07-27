@@ -32,51 +32,96 @@
 						<div class="input-group mb-3">
   							<div class="input-group-prepend">
     							<span class="input-group-text" id="inputGroup-sizing-default">Producto</span>
-		  							<button type="button" class="btn btn-secondary btn-produ" data-container="body" data-toggle="popover" data-placement="bottom" data-content="
+		  							<button type="button" onchange="cambiar()" class="btn btn-secondary btn-produ" data-container="body" data-toggle="popover" onclick="" data-placement="bottom" data-content="
+
+
+		  							<script>
+		  								function cargarValores(){
+											console.log('voy a cargar los valores')
+											console.log(largo)
+											$('#mlargo').val(largo)
+											$('#alto').val(alto)
+											$('#ancho').val(ancho)
+											$('#peso').val(peso)
+											$('#pesodoc').val(pesodoc)
+
+										}
+										cargarValores()
+
+										function guardarCambios(){
+
+												console.log('voy a guardar valores')
+												console.log ($('#mlargo'))
+												largo = $('#mlargo').val()
+												alto = $('#alto').val()
+												ancho = $('#ancho').val()
+												peso = $('#peso').val()
+												pesodoc = $('#pesodoc').val()
+											}
+									</script>
+
+
+
 										<div class='col-xs-2'>
 											<!-- ROW 1 -->
 											<div class='input-group mb-3'>
 										 <div class='input-group-prepend'>
-										  <span class='input-group-text' id='inputGroup-sizing-default'>cm</span>
+										  <span class='input-group-text' id='inputGroup-sizing-default'>Largo</span>
 										</div>
-										<input type='number' placeholder='Largo' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default'>
+										<input id=mlargo type='number' placeholder='cm' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' onchange='guardarCambios()'>
+										<!-- dato guardado de largo -->
 										 </div>
 
 										 <!-- ROW 2 -->
 										<div class='input-group mb-3'>
 										 <div class='input-group-prepend'>
-										  <span class='input-group-text' id='inputGroup-sizing-default'>cm</span>
+										  <span class='input-group-text' id='inputGroup-sizing-default'>Alto</span>
 										</div>
-										<input type='number' placeholder='Alto' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default'>
+										<input id='alto' type='number' placeholder='cm' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default'>
+										<input type='text' hidden='true' onchange='guardarCambios()'>
 										 </div>
 
 										 <!-- ROW 3 -->
 										 <div class='input-group mb-3'>
 										 <div class='input-group-prepend'>
-										  <span class='input-group-text' id='inputGroup-sizing-default'>cm</span>
+										  <span class='input-group-text' id='inputGroup-sizing-default'>Ancho</span>
 										</div>
-										<input type='number' placeholder='Ancho' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default'>
+										<input id='ancho' type='number' placeholder='cm' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' onchange='guardarCambios()'>
 										 </div>
 
-										 <!-- ROW 3 -->
+										 <!-- ROW 4 -->
 										 <div class='input-group mb-3'>
 										 <div class='input-group-prepend'>
-										  <span class='input-group-text' id='inputGroup-sizing-default'>KG</span>
+										  <span class='input-group-text' id='inputGroup-sizing-default'>Peso</span>
 										</div>
-										<input type='number' placeholder='Peso' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default'>
+										<input id='peso' type='number' placeholder='Kg' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' onchange='guardarCambios()'>
 										 </div>
 
 										 <!-- END -->
 										</div>
 		  							">Paquete
 									</button>
-									<button type="button" class="btn btn-secondary btn-produ" data-container="body" data-toggle="popover" data-placement="bottom" data-content="
+									<button type="button" class="btn btn-secondary btn-produ" data-container="body" data-toggle="popover" data-placement="bottom" onchange="cambiar()" data-content="
+
+									<script>
+		  								function cargarValores(){
+											$('#pesodoc').val(pesodoc)
+
+										}
+										cargarValores()
+
+										function guardarCambios(){
+
+												console.log('voy a guardar valores')
+												pesodoc = $('#pesodoc').val()
+											}
+									</script>
 										<div class='col-xs-3'>
 										<div class='input-group mb-3'>
 										 <div class='input-group-prepend'>
-										  <span class='input-group-text' id='inputGroup-sizing-default'>KG</span>
+										  <span class='input-group-text' id='inputGroup-sizing-default'>Peso</span>
 										</div>
-										<input type='number' placeholder='Peso' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default'>
+										<input id='pesodoc' type='number' placeholder='Kg' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' onchange='guardarCambios()'>
 										 </div>
 										</div>
 									">Documento
@@ -154,6 +199,7 @@
   /* Make the image fully responsive */
   .carousel-inner img {
       width: 100%;
+      height: 100%;
       
   }
   </style>
@@ -170,15 +216,14 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-    	<p class="p">TRABAJAMOS SOLO CON LOS MEJORES</p>
-      <%= link_to image_tag('paqueteria final.jpg', :class => 'img-car',:alt => 'Mostrar detalle de prospecto') %> 
+      <%= link_to image_tag('paqueteria final 2.jpg', :class => 'img-car',:alt => 'Mostrar detalle de prospecto') %> 
     </div>
     <div class="carousel-item">
-    	<p class="p">ATENCION PERSONALIZADA</p>
-      <%= link_to image_tag('atencion a clientes.jpg', :class => 'img-car',:alt => 'Mostrar detalle de prospecto') %> 
+    	<p class="p">ATENCIÓN PERSONALIZADA</p>
+      <%= link_to image_tag('atencion a clientes 2.jpg', :class => 'img-car',:alt => 'Mostrar detalle de prospecto') %> 
     </div>
     <div class="carousel-item">
-      <%= link_to image_tag('paqueteria final.jpg', :class => 'img-car',:alt => 'Mostrar detalle de prospecto') %> 
+      <%= link_to image_tag('paqueteria final 2.jpg', :class => 'img-car',:alt => 'Mostrar detalle de prospecto') %> 
     </div>
   </div>
   
@@ -191,13 +236,17 @@
   </a>
 </div>
 
-
 <script>
+	var largo = ""
+	var ancho = ""
+	var alto = ""
+	var peso = ""
+	var pesodoc=""
+
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover({ html : true });
 });
-
-
+  
 </script>
 
 
@@ -210,8 +259,6 @@ $(document).ready(function(){
   function map2(){
      document.getElementById("inpt").value="dir2";
   };
-
-
 </script>
 
 
