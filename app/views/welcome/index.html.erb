@@ -286,9 +286,8 @@ else {
       document.getElementById('direccion').innerHTML = results[0].formatted_address;
       var id=document.getElementById("inpt").value;
       document.getElementById(id).value=results[0].formatted_address;
-      $('#closemodal').click(function() {
+    
       $('#exampleModalCenter').modal('hide');
-      });
     //   var marker = new google.maps.Marker({
     //     map: map,
     //     position: results[0].geometry.location
