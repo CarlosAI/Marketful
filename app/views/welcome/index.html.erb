@@ -13,7 +13,7 @@
     							<span class="input-group-text" id="inputGroup-sizing-default">Origen</span>
   							</div>
   							<input type="text" placeholder="Direccion de Origen" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="dir1">
-  							<span class="map in"><button type="button" class="btn-icon" data-toggle="modal" data-target="#exampleModalCenter">
+  							<span class="map in"><button type="button" class="btn-icon" data-toggle="modal" data-target="#exampleModalCenter" onclick="map1()">
 							</button></span>
 						</div>
 					</div>
@@ -22,8 +22,8 @@
   							<div class="input-group-prepend">
     							<span class="input-group-text" id="inputGroup-sizing-default">Destino</span>
   							</div>
-  							<input type="text" placeholder="Direccion de destino" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-  							<span class="map in"><button type="button" class="btn-icon" data-toggle="modal" data-target="#exampleModalCenter">
+  							<input type="text" placeholder="Direccion de destino" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="dir2">
+  							<span class="map in"><button type="button" class="btn-icon" data-toggle="modal" data-target="#exampleModalCenter" onclick="map2()">
 							</button></span>
 						</div>
 					</div>
@@ -127,15 +127,21 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Choose</button>
+        <button id="closemodal" type="button" class="btn btn-primary" onclick="generate()">Choose</button>
       </div>
     </div>
   </div>
 </div>
 
 
-
 <!-- END MODAL DE MAPAS -->
+
+
+<!-- HIDDEN -->
+
+<input type="text" name="" id="inpt" hidden="true" value="">
+
+<!--  -->
 
 
 <div class="espacio"></div>
@@ -194,6 +200,23 @@ $(document).ready(function(){
 
 </script>
 
+
+<script>
+  
+  function map1(){
+    document.getElementById("inpt").value="dir1";
+  };
+
+  function map2(){
+     document.getElementById("inpt").value="dir2";
+  };
+
+
+</script>
+
+
+
+
 <script type="text/javascript">
 //<![CDATA[
 var map, geocoder;
@@ -232,7 +255,7 @@ function codeAddress() {
       });
 	  //podemos personalisar el toltip aqui
       infowindow = new google.maps.InfoWindow({
-        content: '<h4>JK electricidad</h4>'+results[0].formatted_address + '<br> Latitud: ' + results[0].geometry.location.lat().toFixed(6) + '<br> Longitud: ' + results[0].geometry.location.lng().toFixed(6)
+        content: '<h4></h4>'+results[0].formatted_address + '<br> Latitud: ' + results[0].geometry.location.lat().toFixed(6) + '<br> Longitud: ' + results[0].geometry.location.lng().toFixed(6)
       });
       infowindow.open(map, marker)
     }
@@ -242,6 +265,47 @@ else {
     }
   })
 };
+
 //]]>
+</script>
+
+<script>
+
+  function generate(){
+
+     var address = document.getElementById('address').value;
+  // Función completa de Geocoding
+  geocoder.geocode({
+    'address': address
+// 'latLng': latlng si lo que queremos ejecutar en geocodificación inversa
+  }, function (results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      // document.getElementById('x').innerHTML = results[0].geometry.location.lat().toFixed(6);
+      // document.getElementById('y').innerHTML = results[0].geometry.location.lng().toFixed(6);
+      map.setCenter(results[0].geometry.location);
+      document.getElementById('direccion').innerHTML = results[0].formatted_address;
+      var id=document.getElementById("inpt").value;
+      document.getElementById(id).value=results[0].formatted_address;
+      $('#closemodal').click(function() {
+      $('#exampleModalCenter').modal('hide');
+      });
+    //   var marker = new google.maps.Marker({
+    //     map: map,
+    //     position: results[0].geometry.location
+    //   });
+    // //podemos personalisar el toltip aqui
+    //   infowindow = new google.maps.InfoWindow({
+    //     content: '<h4></h4>'+results[0].formatted_address + '<br> Latitud: ' + results[0].geometry.location.lat().toFixed(6) + '<br> Longitud: ' + results[0].geometry.location.lng().toFixed(6)
+    //   });
+    //   infowindow.open(map, marker)
+    }
+// Se detallan los diferentes tipos de error
+else {
+      alert('Selecciona una direccion valida' + status)
+    }
+  })
+   
+  };
+
 </script>
 

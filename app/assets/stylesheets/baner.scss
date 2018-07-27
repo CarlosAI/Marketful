@@ -16,9 +16,11 @@ input.btn-buscar{
 #address{
 	width: 60%;
 }
-.form-control {
+
+input.form-control {
     display: inline;
 }
+
 /*END MAPA*/
 body{
 	background-image: url(morado.jpg);
@@ -99,6 +101,7 @@ span.input-group-text:hover{
 .red{
 	color:red;
 }
+
 
 
 @media (max-width: 991px){
