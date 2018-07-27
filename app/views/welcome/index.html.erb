@@ -27,7 +27,8 @@
 							</button></span>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-xs-12 h">
+					
+					<div class="col-lg-4 col-md-6 col-xs-12 h h3">
 						<div class="input-group mb-3">
   							<div class="input-group-prepend">
     							<span class="input-group-text" id="inputGroup-sizing-default">Producto</span>
@@ -111,11 +112,12 @@
 
         
         <section id="texto">
-      <input id="address" type="textbox" size="38" maxlength="80" value="" placeholder="Dirección o Lat, Lng" />
+      <input id="address" class="form-control" type="textbox" size="38" maxlength="80" value="" placeholder="Dirección o Lat, Lng" />
+      <input type="button" class="navi btn btn-light" value="Localizar" onclick="codeAddress()" id="btn-bus">
       <br>
       <!--nos devuelve la direcion completa-->
       Dirección completa:<br><span style="color:blue;" id="direccion"></span>
-      <input type="button" class="navi" value="Localizar" onclick="codeAddress()">
+      
     </section>
         <div id="mapa">
          </div>
