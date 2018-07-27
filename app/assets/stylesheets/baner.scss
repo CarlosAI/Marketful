@@ -108,6 +108,15 @@ span.input-group-text:hover{
 
 }
 
+@media (max-width: 329px){
+	#inputGroup-sizing-default{
+		display: none;
+	}
+
+
+}
+
+
 @media (max-width: 767px){
 
 	.color{
