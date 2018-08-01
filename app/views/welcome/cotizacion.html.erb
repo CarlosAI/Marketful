@@ -1,0 +1,179 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<!----Titulo -->
+<div class="bloque">
+	<p id="Encabezado_Titulo" style="color: white">!Servicio de envío¡
+</div>
+<br>
+<br>
+<br>
+<!----Carrusel -->
+<div class="bloque">
+	<div id="A">
+		<h3 style="color: white" id="C">Cotizador</h3>
+	</div>
+	<div id="A">
+		<h3 style="color: white" id="C">Servicios</h3>
+	</div>
+	<div id="A">
+		<h3 style="color: white" id="C">Remitentes</h3>
+	</div>
+	<div id="A">
+		<h3 style="color: white" id="C">Destino</h3>
+	</div>
+	<div id="A">
+		<h3 style="color: white" id="C">Pagar</h3>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<!----Lista -->
+<div class="bloque">
+<div class="A">
+	<%=image_tag('paqueteria final 2.jpg', :class => '', :size=>'280x80' ,:alt => 'Mostrar detalle de prospecto') %>   <!-- Logo-->
+</div>
+<div class="A">
+	<strong><p>Servicio Express</strong>
+	<p>Estimacion     <!-- Estimacion de llegada/Tipo de servicio-->
+</div>
+<div class="A">
+	<strong><p>Precio al publico</strong>
+	<strong><p>Ahorro</strong>$999.99MXN    <!-- Precio/Ahorro-->
+</div>
+<div class="A">
+	<strong><p>Seguro de envio</strong>
+	<p>Precio(numero)    <!-- Seguro de envio/Precio-->
+</div>
+<div class="A">
+	<strong><p>Precio EnvioClick
+	Pro</strong>
+	<strong><p>$999.999MXN</strong>    <!-- Precio envio pro/precio$$-->
+</div>
+</div>
+<br>
+<br>
+<div class="bloque">
+	<div class="A">
+		<%=image_tag('paqueteria final 2.jpg', :class => '', :size=>'280x80' ,:alt => 'Mostrar detalle de prospecto') %>   <!-- Logo-->
+	</div>
+	<div class="A">
+		<strong><p>Servicio Express</strong>
+		<p>Estimacion     <!-- Estimacion de llegada/Tipo de servicio-->
+	</div>
+	<div class="A">
+		<strong><p>Precio al publico</strong>
+		<strong><p>Ahorro</strong>$999.99MXN    <!-- Precio/Ahorro-->
+	</div>
+	<div class="A">
+		<strong><p>Seguro de envio</strong>
+		<p>Precio(numero)    <!-- Seguro de envio/Precio-->
+	</div>
+	<div class="A">
+		<strong><p>Precio EnvioClick
+		Pro</strong>
+		<strong><p>$999.999MXN</strong>    <!-- Precio envio pro/precio$$-->
+	</div>
+</div>
+
+
+<div class="bloque">
+<div class="A">
+	<%=image_tag('paqueteria final 2.jpg', :class => '', :size=>'280x80' ,:alt => 'Mostrar detalle de prospecto') %>   <!-- Logo-->
+</div>
+<div class="A">
+	<strong><p>Servicio Express</strong>
+	<p>Estimacion     <!-- Estimacion de llegada/Tipo de servicio-->
+</div>
+<div class="A">
+	<strong><p>Precio al publico</strong>
+	<strong><p>Ahorro</strong>$999.99MXN    <!-- Precio/Ahorro-->
+</div>
+<div class="A">
+	<strong><p>Seguro de envio</strong>
+	<p>Precio(numero)    <!-- Seguro de envio/Precio-->
+</div>
+<div class="A">
+	<strong><p>Precio EnvioClick
+	Pro</strong>
+	<strong><p>$999.999MXN</strong>    <!-- Precio envio pro/precio$$-->
+</div>
+<div class="bloque">
+	<button type="submit" id="btn1">Volver a cotizar</button>
+	<button type="submit" id="btn2">Guardar</button>
+</div>
+
+
+
+<style>
+.bloque{
+	width: 100%;
+	margin-top: 5px;
+	display: flex;
+  justify-content: center;
+}
+.bloque .A{
+	/*display: inline-block;*/
+	width: 200px;
+	background-color: white;
+}
+
+#Encabezado_Titulo{
+	font-size: 36px;
+}
+
+button{
+	width: 200px;
+	height: 60px;
+	border-radius: 15px;
+	margin: 15px;
+}
+#C{
+	font-style: 48px;
+	margin: 10px;
+}
+
+@media screen and(max-width: 640px) {
+
+.bloque{
+	width: 60%;
+	
+	display: flex;
+  justify-content: center;
+  background-color: yellow;
+}
+.bloque .A{
+	display: inline-block;
+	/*width: 50%;*/
+	/*background-color: white;*/
+}
+
+	button{
+	width: 100px;
+	height: 30px;
+	border-radius: 15px;
+	margin: 15px;
+}
+}
+</style>
+
+
+<script>
+window.onload = function () {
+
+
+		elemH = document.querySelectorAll('h1, h3');
+
+		for (var i = 0; i < elemH.length; i++) {
+			elemH[i].onmouseover = function () {return this.style.color = "orange";}
+			elemH[i].onmouseout = function() {return this.style.color = "white";} 
+		}
+
+		for (var i = 0; i < elemP.length; i++) {
+			elemP[i].onmouseover = function() {return this.style.backgroundColor = "yellow";}
+			elemP[i].onmouseout = function(){return this.style.backgroundColor = "transparent"};
+		}
+		
+	}
+</script>
