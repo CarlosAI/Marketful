@@ -1,160 +1,158 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
-<!----Titulo -->
-<div class="bloque">
-	<p id="Encabezado_Titulo" style="color: white">!Servicio de envío¡
-</div>
-<br>
-<br>
-<br>
 <!----Carrusel -->
-<div class="bloque">
-	<div id="A">
-		<h3 style="color: white" id="C">Cotizador</h3>
-	</div>
-	<div id="A">
-		<h3 style="color: white" id="C">Servicios</h3>
-	</div>
-	<div id="A">
-		<h3 style="color: white" id="C">Remitentes</h3>
-	</div>
-	<div id="A">
-		<h3 style="color: white" id="C">Destino</h3>
-	</div>
-	<div id="A">
-		<h3 style="color: white" id="C">Pagar</h3>
+<div class="container-fluid">
+	<h1>!Servicio de envio¡</h1>
+	<br>
+	<br>
+	<div class="row" style="align-items: center;">
+		<div class="col-lg-1 col-md-1"></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6"><h3>Cotizador</h3></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6"><h3>Servicio</h3></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6"><h3>Remitente</h3></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6"><h3>Destinatario</h3></div>
+		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><h3>Pagar</h3></div>
 	</div>
 </div>
-<br>
-<br>
-<br>
+<!----Fin carrusel -->
+
 <!----Lista -->
-<div class="bloque">
-<div class="A">
-	<%=image_tag('paqueteria final 2.jpg', :class => '', :size=>'280x80' ,:alt => 'Mostrar detalle de prospecto') %>   <!-- Logo-->
-</div>
-<div class="A">
-	<strong><p>Servicio Express</strong>
-	<p>Estimacion     <!-- Estimacion de llegada/Tipo de servicio-->
-</div>
-<div class="A">
-	<strong><p>Precio al publico</strong>
-	<strong><p>Ahorro</strong>$999.99MXN    <!-- Precio/Ahorro-->
-</div>
-<div class="A">
-	<strong><p>Seguro de envio</strong>
-	<p>Precio(numero)    <!-- Seguro de envio/Precio-->
-</div>
-<div class="A">
-	<strong><p>Precio EnvioClick
-	Pro</strong>
-	<strong><p>$999.999MXN</strong>    <!-- Precio envio pro/precio$$-->
-</div>
-</div>
-<br>
-<br>
-<div class="bloque">
-	<div class="A">
-		<%=image_tag('paqueteria final 2.jpg', :class => '', :size=>'280x80' ,:alt => 'Mostrar detalle de prospecto') %>   <!-- Logo-->
+<div class="container-fluid">
+	<div class="row" style="align-items: center;">
+		<div class="col-lg-1 col-md-1"></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><%= link_to image_tag('logo-redpack-or.png', :class => '', :width=>'180',:alt => '') %></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Servicio Ecoexpress</h4>
+			<h6>Entrega aproximada en 6 dias</h6></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Precio al publico</h4>
+			<s><h6>$999.99MXN</h6></s>
+			<strong><h6 style="color: green">Ahorra</strong> $999.99MXN</h6>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Seguro del envio</h4>
+			<h6>$0.00MXN</h6>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-6"><h4>Precio EnvioClick PRO</h4>
+		<strong><h6>$ 999.99MXN</h6></strong>
+		</div>
 	</div>
-	<div class="A">
-		<strong><p>Servicio Express</strong>
-		<p>Estimacion     <!-- Estimacion de llegada/Tipo de servicio-->
+
+	<br>
+
+	<div class="row" style="align-items: center;">
+		<div class="col-lg-1 col-md-1"></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><%= link_to image_tag('logo-redpack-or.png', :class => '', :width=>'180',:alt => '') %></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Servicio Ecoexpress</h4>
+			<h6>Entrega aproximada en 6 dias</h6></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Precio al publico</h4>
+			<s><h6>$999.99MXN</h6></s>
+			<strong><h6 style="color: green">Ahorra</strong> $999.99MXN</h6>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Seguro del envio</h4>
+			<h6>$0.00MXN</h6>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-6"><h4>Precio EnvioClick PRO</h4>
+		<strong><h6>$ 999.99MXN</h6></strong>
+		</div>
 	</div>
-	<div class="A">
-		<strong><p>Precio al publico</strong>
-		<strong><p>Ahorro</strong>$999.99MXN    <!-- Precio/Ahorro-->
+
+	<br>
+
+	<div class="row" style="align-items: center;">
+		<div class="col-lg-1 col-md-1"></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><%= link_to image_tag('logo-fedex-or.png', :class => '', :width=>'180',:alt => '') %></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Servicio Ecoexpress</h4>
+			<h6>Entrega aproximada en 6 dias</h6></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Precio al publico</h4>
+			<s><h6>$999.99MXN</h6></s>
+			<strong><h6 style="color: green">Ahorra</strong> $999.99MXN</h6>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Seguro del envio</h4>
+			<h6>$0.00MXN</h6>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-6"><h4>Precio EnvioClick PRO</h4>
+		<strong><h6>$ 999.99MXN</h6></strong>
+		</div>
 	</div>
-	<div class="A">
-		<strong><p>Seguro de envio</strong>
-		<p>Precio(numero)    <!-- Seguro de envio/Precio-->
+	<br>
+
+	<div class="row" style="align-items: center;">
+		<div class="col-lg-1 col-md-1"></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><%= link_to image_tag('logo-estafeta-or.png', :class => '', :width=>'180',:alt => '') %></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Servicio Ecoexpress</h4>
+			<h6>Entrega aproximada en 6 dias</h6></div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Precio al publico</h4>
+			<s><h6>$999.99MXN</h6></s>
+			<strong><h6 style="color: green">Ahorra</strong> $999.99MXN</h6>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+			<h4>Seguro del envio</h4>
+			<h6>$0.00MXN</h6>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-6"><h4>Precio EnvioClick PRO</h4>
+		<strong><h6>$ 999.99MXN</h6></strong>
+		</div>
 	</div>
-	<div class="A">
-		<strong><p>Precio EnvioClick
-		Pro</strong>
-		<strong><p>$999.999MXN</strong>    <!-- Precio envio pro/precio$$-->
+
+	<br>
+	<br>
+</div>
+<div class="container-fluid">
+	<div class="row" style="align-items: center;">
+		<div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
+		<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+			<button type="submit" class="btn1">Volver a cotizar</button>
+		</div>
+		<div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>
+		<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+			<button type="submit" class="btn2">Guardar</button>
+		</div>
+		<div class="col-lg-3"></div>
 	</div>
 </div>
 
-
-<div class="bloque">
-<div class="A">
-	<%=image_tag('paqueteria final 2.jpg', :class => '', :size=>'280x80' ,:alt => 'Mostrar detalle de prospecto') %>   <!-- Logo-->
-</div>
-<div class="A">
-	<strong><p>Servicio Express</strong>
-	<p>Estimacion     <!-- Estimacion de llegada/Tipo de servicio-->
-</div>
-<div class="A">
-	<strong><p>Precio al publico</strong>
-	<strong><p>Ahorro</strong>$999.99MXN    <!-- Precio/Ahorro-->
-</div>
-<div class="A">
-	<strong><p>Seguro de envio</strong>
-	<p>Precio(numero)    <!-- Seguro de envio/Precio-->
-</div>
-<div class="A">
-	<strong><p>Precio EnvioClick
-	Pro</strong>
-	<strong><p>$999.999MXN</strong>    <!-- Precio envio pro/precio$$-->
-</div>
-<div class="bloque">
-	<button type="submit" id="btn1">Volver a cotizar</button>
-	<button type="submit" id="btn2">Guardar</button>
-</div>
-
-
-
+<!----Fin lista -->
 <style>
-.bloque{
-	width: 100%;
-	margin-top: 5px;
-	display: flex;
-  justify-content: center;
+h1,h3,h6{
+	color: white;
+	text-align: center;
 }
-.bloque .A{
-	/*display: inline-block;*/
-	width: 200px;
-	background-color: white;
+h4{
+	color: orange;
+	text-align: center;	
 }
-
-#Encabezado_Titulo{
-	font-size: 36px;
-}
-
-button{
-	width: 200px;
-	height: 60px;
-	border-radius: 15px;
+.btn1{
+	color: white;
 	margin: 15px;
+	background-color: #223740;
+	border-radius: 19px;
+	width: 150px;
+	height: 70px;
 }
-#C{
-	font-style: 48px;
-	margin: 10px;
-}
-
-@media screen and(max-width: 640px) {
-
-.bloque{
-	width: 60%;
-	
-	display: flex;
-  justify-content: center;
-  background-color: yellow;
-}
-.bloque .A{
-	display: inline-block;
-	/*width: 50%;*/
-	/*background-color: white;*/
-}
-
-	button{
-	width: 100px;
-	height: 30px;
-	border-radius: 15px;
+.btn2{
+	color: white;
 	margin: 15px;
-}
+	background-color: orange;
+	border-radius: 19px;
+	width: 150px;
+	height: 70px;	
 }
 </style>
 
@@ -163,7 +161,7 @@ button{
 window.onload = function () {
 
 
-		elemH = document.querySelectorAll('h1, h3');
+		elemH = document.querySelectorAll('h3');
 
 		for (var i = 0; i < elemH.length; i++) {
 			elemH[i].onmouseover = function () {return this.style.color = "orange";}
